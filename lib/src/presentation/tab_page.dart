@@ -24,6 +24,7 @@ class _TabPageState extends State<TabPage> {
     return Scaffold(
       body: pages[selectedIndex],
       bottomNavigationBar: NavigationBar(
+        selectedIndex: selectedIndex,
         onDestinationSelected: (value) {
           setState(() {
             selectedIndex = value;
