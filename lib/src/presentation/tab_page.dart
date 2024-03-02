@@ -1,4 +1,6 @@
 import 'package:air_quality_idx/src/presentation/home_page.dart';
+import 'package:air_quality_idx/src/presentation/search_page.dart';
+import 'package:air_quality_idx/src/presentation/settings_page.dart';
 import 'package:flutter/material.dart';
 
 class TabPage extends StatefulWidget {
@@ -13,8 +15,8 @@ class _TabPageState extends State<TabPage> {
 
   final List<Widget> pages = const [
     HomePage(),
-    Text('Search'),
-    Text('Settings'),
+    SearchPage(),
+    SettingsPage(),
   ];
 
   @override

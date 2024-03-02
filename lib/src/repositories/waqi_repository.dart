@@ -42,4 +42,34 @@ class WaqiRepository {
       return left(Failure.unknown());
     }
   }
+
+  Future<Either<Failure, AQIResponse>> search(String city) async {
+    try {
+      final waqiToken = dotenv.env['WAQI_TOKEN'];
+
+      if (waqiToken == null) {
+        throw Exception('WAQI_TOKEN is not available');
+      }
+
+      final response = await http.get(
+        Uri.parse('https://api.waqi.info/feed/$city/?token=$waqiToken'),
+      );
+
+      if (response.statusCode == 200) {
+        final json = jsonDecode(response.body);
+        log(response.body);
+        final aqiResponse = AQIResponse.fromJson(json);
+        return right(aqiResponse);
+      } else {
+        return left(Failure.serverError());
+      }
+    } on SocketException {
+      return left(Failure.noInternet());
+    } on Exception {
+      return left(Failure.unknown());
+    } catch (e) {
+      log(e.toString());
+      return left(Failure.unknown());
+    }
+  }
 }

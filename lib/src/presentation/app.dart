@@ -1,3 +1,4 @@
+import 'package:air_quality_idx/src/cubit/wai_search_cubit.dart';
 import 'package:air_quality_idx/src/cubit/waqi_cubit.dart';
 import 'package:air_quality_idx/src/presentation/tab_page.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +9,15 @@ class AQIApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<WaqiCubit>(
-      create: (context) => WaqiCubit()..getAqiWithIP(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<WaqiCubit>(
+          create: (context) => WaqiCubit()..getAqiWithIP(),
+        ),
+        BlocProvider<WaiSearchCubit>(
+          create: (context) => WaiSearchCubit(),
+        ),
+      ],
       child: MaterialApp(
         title: 'AQI: Air Quality Near Me',
         debugShowCheckedModeBanner: false,
