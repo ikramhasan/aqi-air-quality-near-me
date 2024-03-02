@@ -1,13 +1,8 @@
 import 'package:air_quality_idx/src/cubit/waqi_cubit.dart';
 import 'package:air_quality_idx/src/models/failure.dart';
 import 'package:air_quality_idx/src/presentation/aqi_page.dart';
-import 'package:air_quality_idx/src/presentation/components/pollutant_amount_box.dart';
-import 'package:air_quality_idx/src/presentation/components/pollutant_info_box.dart';
-import 'package:air_quality_idx/src/utils/aqi_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:intl/intl.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
