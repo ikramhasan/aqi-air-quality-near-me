@@ -1,5 +1,5 @@
 import 'package:air_quality_idx/src/cubit/waqi_cubit.dart';
-import 'package:air_quality_idx/src/presentation/home_page.dart';
+import 'package:air_quality_idx/src/presentation/tab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +17,7 @@ class AQIApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
           useMaterial3: true,
         ),
-        home: const HomePage(),
+        home: const TabPage(),
       ),
     );
   }

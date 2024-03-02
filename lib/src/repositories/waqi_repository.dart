@@ -39,7 +39,6 @@ class WaqiRepository {
       return left(Failure.unknown());
     } catch (e) {
       log(e.toString());
-      rethrow;
       return left(Failure.unknown());
     }
   }

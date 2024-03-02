@@ -28,9 +28,10 @@ class HomePage extends StatelessWidget {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-              vertical: 32,
+            padding: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 32,
             ),
             child: BlocBuilder<WaqiCubit, WaqiState>(
               builder: (context, state) {
@@ -212,7 +213,10 @@ class HomePage extends StatelessWidget {
                         elevation: 0,
                         child: ListTile(
                           titleAlignment: ListTileTitleAlignment.top,
-                          leading: SvgPicture.asset(sanitizedData.icon),
+                          leading: SvgPicture.asset(
+                            sanitizedData.icon,
+                            color: sanitizedData.color,
+                          ),
                           title: const Text('Health Implications'),
                           subtitle: Text(sanitizedData.healthImplications),
                         ),
@@ -223,7 +227,10 @@ class HomePage extends StatelessWidget {
                         elevation: 0,
                         child: ListTile(
                           titleAlignment: ListTileTitleAlignment.top,
-                          leading: const Icon(Icons.warning),
+                          leading: Icon(
+                            Icons.warning,
+                            color: sanitizedData.color,
+                          ),
                           title: const Text('Cautionary Statement'),
                           subtitle: Text(sanitizedData.cautionaryStatement),
                         ),
