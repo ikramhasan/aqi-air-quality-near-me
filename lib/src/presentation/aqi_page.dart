@@ -3,6 +3,7 @@ import 'package:air_quality_idx/src/presentation/components/pollutant_amount_box
 import 'package:air_quality_idx/src/presentation/components/pollutant_info_box.dart';
 import 'package:air_quality_idx/src/utils/aqi_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 
@@ -55,22 +56,27 @@ class AQIPage extends StatelessWidget {
                 const Divider(thickness: 0.5),
                 Row(
                   children: [
-                    Text(
-                      sanitizedData.pollutionLevel,
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: sanitizedData.color,
+                    SizedBox(
+                      width: width - 32 - 144 - 6,
+                      child: Text(
+                        sanitizedData.pollutionLevel,
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: sanitizedData.color,
+                        ),
                       ),
                     ),
                     const Spacer(),
                     PollutantInfoBox(
+                      width: 50,
                       color: sanitizedData.color,
                       value: aqi.data.aqi.toString(),
                       label: 'AQI',
                     ),
                     const SizedBox(width: 8),
                     PollutantInfoBox(
+                      width: 60,
                       color: sanitizedData.color,
                       value: aqi.data.iaqi.pm25.v.toString(),
                       label: aqi.data.dominantPollutant,

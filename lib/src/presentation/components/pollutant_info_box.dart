@@ -6,15 +6,18 @@ class PollutantInfoBox extends StatelessWidget {
     required this.color,
     required this.value,
     required this.label,
+    required this.width,
   });
 
   final Color color;
   final String value;
   final String label;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(8),
