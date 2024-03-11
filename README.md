@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo/logo.png" width="100" alt="project-logo">
+  <img src="assets/logo/logo.png" width="250" alt="project-logo">
 </p>
 <p align="center">
     <h1 align="center">AQI: Air Quality Near Me</h1>
@@ -131,4 +131,3 @@ Contributions are welcome! Here are several ways you can contribute:
 This project is protected under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) License. For more details, refer to the [LICENSE](LICENSE) file.
 
 [**Return**](#-overview)
-
