@@ -26,7 +26,14 @@ class SettingsPage extends StatelessWidget {
               right: 16,
               top: 32,
             ),
-            child: AboutWidget(),
+            child: Column(
+              children: [
+                AboutWidget(),
+                Spacer(),
+                Text('Note: This app does not represent any government entity'),
+                SizedBox(height: 16),
+              ],
+            ),
           ),
         ),
       ),

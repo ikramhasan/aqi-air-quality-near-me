@@ -1,4 +1,4 @@
-package com.example.air_quality_idx
+package com.ikramhasan.air_quality_idx
 
 import io.flutter.embedding.android.FlutterActivity
 
