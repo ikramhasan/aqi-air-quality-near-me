@@ -10,7 +10,7 @@
 
 <br><!-- TABLE OF CONTENTS -->
 
-<details>
+<details open>
   <summary>Table of Contents</summary><br>
 
 - [📍 Overview](#-overview)
@@ -132,4 +132,3 @@ This project is protected under the [Apache License 2.0](https://choosealicense.
 
 [**Return**](#-overview)
 
----
