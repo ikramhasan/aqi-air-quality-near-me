@@ -192,7 +192,7 @@ mixin _$Data {
   List<Attribution> get attributions => throw _privateConstructorUsedError;
   City get city => throw _privateConstructorUsedError;
   @JsonKey(name: 'dominentpol')
-  String get dominantPollutant => throw _privateConstructorUsedError;
+  String? get dominantPollutant => throw _privateConstructorUsedError;
   Debug get debug => throw _privateConstructorUsedError;
   Time get time => throw _privateConstructorUsedError;
   IAQI get iaqi => throw _privateConstructorUsedError;
@@ -213,7 +213,7 @@ abstract class $DataCopyWith<$Res> {
       int idx,
       List<Attribution> attributions,
       City city,
-      @JsonKey(name: 'dominentpol') String dominantPollutant,
+      @JsonKey(name: 'dominentpol') String? dominantPollutant,
       Debug debug,
       Time time,
       IAQI iaqi,
@@ -243,7 +243,7 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
     Object? idx = null,
     Object? attributions = null,
     Object? city = null,
-    Object? dominantPollutant = null,
+    Object? dominantPollutant = freezed,
     Object? debug = null,
     Object? time = null,
     Object? iaqi = null,
@@ -266,10 +266,10 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as City,
-      dominantPollutant: null == dominantPollutant
+      dominantPollutant: freezed == dominantPollutant
           ? _value.dominantPollutant
           : dominantPollutant // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       debug: null == debug
           ? _value.debug
           : debug // ignore: cast_nullable_to_non_nullable
@@ -342,7 +342,7 @@ abstract class _$$DataImplCopyWith<$Res> implements $DataCopyWith<$Res> {
       int idx,
       List<Attribution> attributions,
       City city,
-      @JsonKey(name: 'dominentpol') String dominantPollutant,
+      @JsonKey(name: 'dominentpol') String? dominantPollutant,
       Debug debug,
       Time time,
       IAQI iaqi,
@@ -374,7 +374,7 @@ class __$$DataImplCopyWithImpl<$Res>
     Object? idx = null,
     Object? attributions = null,
     Object? city = null,
-    Object? dominantPollutant = null,
+    Object? dominantPollutant = freezed,
     Object? debug = null,
     Object? time = null,
     Object? iaqi = null,
@@ -397,10 +397,10 @@ class __$$DataImplCopyWithImpl<$Res>
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as City,
-      dominantPollutant: null == dominantPollutant
+      dominantPollutant: freezed == dominantPollutant
           ? _value.dominantPollutant
           : dominantPollutant // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       debug: null == debug
           ? _value.debug
           : debug // ignore: cast_nullable_to_non_nullable
@@ -429,7 +429,7 @@ class _$DataImpl implements _Data {
       required this.idx,
       required final List<Attribution> attributions,
       required this.city,
-      @JsonKey(name: 'dominentpol') required this.dominantPollutant,
+      @JsonKey(name: 'dominentpol') this.dominantPollutant,
       required this.debug,
       required this.time,
       required this.iaqi,
@@ -455,7 +455,7 @@ class _$DataImpl implements _Data {
   final City city;
   @override
   @JsonKey(name: 'dominentpol')
-  final String dominantPollutant;
+  final String? dominantPollutant;
   @override
   final Debug debug;
   @override
@@ -523,7 +523,7 @@ abstract class _Data implements Data {
       required final int idx,
       required final List<Attribution> attributions,
       required final City city,
-      @JsonKey(name: 'dominentpol') required final String dominantPollutant,
+      @JsonKey(name: 'dominentpol') final String? dominantPollutant,
       required final Debug debug,
       required final Time time,
       required final IAQI iaqi,
@@ -541,7 +541,7 @@ abstract class _Data implements Data {
   City get city;
   @override
   @JsonKey(name: 'dominentpol')
-  String get dominantPollutant;
+  String? get dominantPollutant;
   @override
   Debug get debug;
   @override
@@ -1226,12 +1226,12 @@ IAQI _$IAQIFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IAQI {
-  IAQIValue get dew => throw _privateConstructorUsedError;
-  IAQIValue get h => throw _privateConstructorUsedError;
-  IAQIValue get p => throw _privateConstructorUsedError;
-  IAQIValue get pm25 => throw _privateConstructorUsedError;
-  IAQIValue get t => throw _privateConstructorUsedError;
-  IAQIValue get w => throw _privateConstructorUsedError;
+  IAQIValue? get dew => throw _privateConstructorUsedError;
+  IAQIValue? get h => throw _privateConstructorUsedError;
+  IAQIValue? get p => throw _privateConstructorUsedError;
+  IAQIValue? get pm25 => throw _privateConstructorUsedError;
+  IAQIValue? get t => throw _privateConstructorUsedError;
+  IAQIValue? get w => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1244,19 +1244,19 @@ abstract class $IAQICopyWith<$Res> {
       _$IAQICopyWithImpl<$Res, IAQI>;
   @useResult
   $Res call(
-      {IAQIValue dew,
-      IAQIValue h,
-      IAQIValue p,
-      IAQIValue pm25,
-      IAQIValue t,
-      IAQIValue w});
+      {IAQIValue? dew,
+      IAQIValue? h,
+      IAQIValue? p,
+      IAQIValue? pm25,
+      IAQIValue? t,
+      IAQIValue? w});
 
-  $IAQIValueCopyWith<$Res> get dew;
-  $IAQIValueCopyWith<$Res> get h;
-  $IAQIValueCopyWith<$Res> get p;
-  $IAQIValueCopyWith<$Res> get pm25;
-  $IAQIValueCopyWith<$Res> get t;
-  $IAQIValueCopyWith<$Res> get w;
+  $IAQIValueCopyWith<$Res>? get dew;
+  $IAQIValueCopyWith<$Res>? get h;
+  $IAQIValueCopyWith<$Res>? get p;
+  $IAQIValueCopyWith<$Res>? get pm25;
+  $IAQIValueCopyWith<$Res>? get t;
+  $IAQIValueCopyWith<$Res>? get w;
 }
 
 /// @nodoc
@@ -1272,85 +1272,109 @@ class _$IAQICopyWithImpl<$Res, $Val extends IAQI>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dew = null,
-    Object? h = null,
-    Object? p = null,
-    Object? pm25 = null,
-    Object? t = null,
-    Object? w = null,
+    Object? dew = freezed,
+    Object? h = freezed,
+    Object? p = freezed,
+    Object? pm25 = freezed,
+    Object? t = freezed,
+    Object? w = freezed,
   }) {
     return _then(_value.copyWith(
-      dew: null == dew
+      dew: freezed == dew
           ? _value.dew
           : dew // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      h: null == h
+              as IAQIValue?,
+      h: freezed == h
           ? _value.h
           : h // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      p: null == p
+              as IAQIValue?,
+      p: freezed == p
           ? _value.p
           : p // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      pm25: null == pm25
+              as IAQIValue?,
+      pm25: freezed == pm25
           ? _value.pm25
           : pm25 // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      t: null == t
+              as IAQIValue?,
+      t: freezed == t
           ? _value.t
           : t // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      w: null == w
+              as IAQIValue?,
+      w: freezed == w
           ? _value.w
           : w // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
+              as IAQIValue?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get dew {
-    return $IAQIValueCopyWith<$Res>(_value.dew, (value) {
+  $IAQIValueCopyWith<$Res>? get dew {
+    if (_value.dew == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.dew!, (value) {
       return _then(_value.copyWith(dew: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get h {
-    return $IAQIValueCopyWith<$Res>(_value.h, (value) {
+  $IAQIValueCopyWith<$Res>? get h {
+    if (_value.h == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.h!, (value) {
       return _then(_value.copyWith(h: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get p {
-    return $IAQIValueCopyWith<$Res>(_value.p, (value) {
+  $IAQIValueCopyWith<$Res>? get p {
+    if (_value.p == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.p!, (value) {
       return _then(_value.copyWith(p: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get pm25 {
-    return $IAQIValueCopyWith<$Res>(_value.pm25, (value) {
+  $IAQIValueCopyWith<$Res>? get pm25 {
+    if (_value.pm25 == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.pm25!, (value) {
       return _then(_value.copyWith(pm25: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get t {
-    return $IAQIValueCopyWith<$Res>(_value.t, (value) {
+  $IAQIValueCopyWith<$Res>? get t {
+    if (_value.t == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.t!, (value) {
       return _then(_value.copyWith(t: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $IAQIValueCopyWith<$Res> get w {
-    return $IAQIValueCopyWith<$Res>(_value.w, (value) {
+  $IAQIValueCopyWith<$Res>? get w {
+    if (_value.w == null) {
+      return null;
+    }
+
+    return $IAQIValueCopyWith<$Res>(_value.w!, (value) {
       return _then(_value.copyWith(w: value) as $Val);
     });
   }
@@ -1364,25 +1388,25 @@ abstract class _$$IAQIImplCopyWith<$Res> implements $IAQICopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {IAQIValue dew,
-      IAQIValue h,
-      IAQIValue p,
-      IAQIValue pm25,
-      IAQIValue t,
-      IAQIValue w});
+      {IAQIValue? dew,
+      IAQIValue? h,
+      IAQIValue? p,
+      IAQIValue? pm25,
+      IAQIValue? t,
+      IAQIValue? w});
 
   @override
-  $IAQIValueCopyWith<$Res> get dew;
+  $IAQIValueCopyWith<$Res>? get dew;
   @override
-  $IAQIValueCopyWith<$Res> get h;
+  $IAQIValueCopyWith<$Res>? get h;
   @override
-  $IAQIValueCopyWith<$Res> get p;
+  $IAQIValueCopyWith<$Res>? get p;
   @override
-  $IAQIValueCopyWith<$Res> get pm25;
+  $IAQIValueCopyWith<$Res>? get pm25;
   @override
-  $IAQIValueCopyWith<$Res> get t;
+  $IAQIValueCopyWith<$Res>? get t;
   @override
-  $IAQIValueCopyWith<$Res> get w;
+  $IAQIValueCopyWith<$Res>? get w;
 }
 
 /// @nodoc
@@ -1395,38 +1419,38 @@ class __$$IAQIImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dew = null,
-    Object? h = null,
-    Object? p = null,
-    Object? pm25 = null,
-    Object? t = null,
-    Object? w = null,
+    Object? dew = freezed,
+    Object? h = freezed,
+    Object? p = freezed,
+    Object? pm25 = freezed,
+    Object? t = freezed,
+    Object? w = freezed,
   }) {
     return _then(_$IAQIImpl(
-      dew: null == dew
+      dew: freezed == dew
           ? _value.dew
           : dew // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      h: null == h
+              as IAQIValue?,
+      h: freezed == h
           ? _value.h
           : h // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      p: null == p
+              as IAQIValue?,
+      p: freezed == p
           ? _value.p
           : p // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      pm25: null == pm25
+              as IAQIValue?,
+      pm25: freezed == pm25
           ? _value.pm25
           : pm25 // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      t: null == t
+              as IAQIValue?,
+      t: freezed == t
           ? _value.t
           : t // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
-      w: null == w
+              as IAQIValue?,
+      w: freezed == w
           ? _value.w
           : w // ignore: cast_nullable_to_non_nullable
-              as IAQIValue,
+              as IAQIValue?,
     ));
   }
 }
@@ -1434,29 +1458,23 @@ class __$$IAQIImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IAQIImpl implements _IAQI {
-  const _$IAQIImpl(
-      {required this.dew,
-      required this.h,
-      required this.p,
-      required this.pm25,
-      required this.t,
-      required this.w});
+  const _$IAQIImpl({this.dew, this.h, this.p, this.pm25, this.t, this.w});
 
   factory _$IAQIImpl.fromJson(Map<String, dynamic> json) =>
       _$$IAQIImplFromJson(json);
 
   @override
-  final IAQIValue dew;
+  final IAQIValue? dew;
   @override
-  final IAQIValue h;
+  final IAQIValue? h;
   @override
-  final IAQIValue p;
+  final IAQIValue? p;
   @override
-  final IAQIValue pm25;
+  final IAQIValue? pm25;
   @override
-  final IAQIValue t;
+  final IAQIValue? t;
   @override
-  final IAQIValue w;
+  final IAQIValue? w;
 
   @override
   String toString() {
@@ -1496,27 +1514,27 @@ class _$IAQIImpl implements _IAQI {
 
 abstract class _IAQI implements IAQI {
   const factory _IAQI(
-      {required final IAQIValue dew,
-      required final IAQIValue h,
-      required final IAQIValue p,
-      required final IAQIValue pm25,
-      required final IAQIValue t,
-      required final IAQIValue w}) = _$IAQIImpl;
+      {final IAQIValue? dew,
+      final IAQIValue? h,
+      final IAQIValue? p,
+      final IAQIValue? pm25,
+      final IAQIValue? t,
+      final IAQIValue? w}) = _$IAQIImpl;
 
   factory _IAQI.fromJson(Map<String, dynamic> json) = _$IAQIImpl.fromJson;
 
   @override
-  IAQIValue get dew;
+  IAQIValue? get dew;
   @override
-  IAQIValue get h;
+  IAQIValue? get h;
   @override
-  IAQIValue get p;
+  IAQIValue? get p;
   @override
-  IAQIValue get pm25;
+  IAQIValue? get pm25;
   @override
-  IAQIValue get t;
+  IAQIValue? get t;
   @override
-  IAQIValue get w;
+  IAQIValue? get w;
   @override
   @JsonKey(ignore: true)
   _$$IAQIImplCopyWith<_$IAQIImpl> get copyWith =>
@@ -1529,7 +1547,7 @@ IAQIValue _$IAQIValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IAQIValue {
-  double get v => throw _privateConstructorUsedError;
+  double? get v => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1542,7 +1560,7 @@ abstract class $IAQIValueCopyWith<$Res> {
   factory $IAQIValueCopyWith(IAQIValue value, $Res Function(IAQIValue) then) =
       _$IAQIValueCopyWithImpl<$Res, IAQIValue>;
   @useResult
-  $Res call({double v});
+  $Res call({double? v});
 }
 
 /// @nodoc
@@ -1558,13 +1576,13 @@ class _$IAQIValueCopyWithImpl<$Res, $Val extends IAQIValue>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? v = null,
+    Object? v = freezed,
   }) {
     return _then(_value.copyWith(
-      v: null == v
+      v: freezed == v
           ? _value.v
           : v // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ) as $Val);
   }
 }
@@ -1577,7 +1595,7 @@ abstract class _$$IAQIValueImplCopyWith<$Res>
       __$$IAQIValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double v});
+  $Res call({double? v});
 }
 
 /// @nodoc
@@ -1591,13 +1609,13 @@ class __$$IAQIValueImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? v = null,
+    Object? v = freezed,
   }) {
     return _then(_$IAQIValueImpl(
-      v: null == v
+      v: freezed == v
           ? _value.v
           : v // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -1605,13 +1623,13 @@ class __$$IAQIValueImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IAQIValueImpl implements _IAQIValue {
-  const _$IAQIValueImpl({required this.v});
+  const _$IAQIValueImpl({this.v});
 
   factory _$IAQIValueImpl.fromJson(Map<String, dynamic> json) =>
       _$$IAQIValueImplFromJson(json);
 
   @override
-  final double v;
+  final double? v;
 
   @override
   String toString() {
@@ -1645,13 +1663,13 @@ class _$IAQIValueImpl implements _IAQIValue {
 }
 
 abstract class _IAQIValue implements IAQIValue {
-  const factory _IAQIValue({required final double v}) = _$IAQIValueImpl;
+  const factory _IAQIValue({final double? v}) = _$IAQIValueImpl;
 
   factory _IAQIValue.fromJson(Map<String, dynamic> json) =
       _$IAQIValueImpl.fromJson;
 
   @override
-  double get v;
+  double? get v;
   @override
   @JsonKey(ignore: true)
   _$$IAQIValueImplCopyWith<_$IAQIValueImpl> get copyWith =>

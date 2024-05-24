@@ -52,7 +52,7 @@ List<Data> data = [
     cautionaryStatement:
         'Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.',
     icon: 'assets/svg/unhealthy-sensitive.svg',
-    color: const Color(0xFFEEFF3E),
+    color: const Color.fromARGB(255, 127, 138, 11),
     recommendations: [
       Recommendation(
         text: 'Sensitive groups should wear a mask outdoors',

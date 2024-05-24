@@ -28,7 +28,7 @@ class Data with _$Data {
     required int idx,
     required List<Attribution> attributions,
     required City city,
-    @JsonKey(name: 'dominentpol') required String dominantPollutant,
+    @JsonKey(name: 'dominentpol') String? dominantPollutant,
     required Debug debug,
     required Time time,
     required IAQI iaqi,
@@ -118,12 +118,12 @@ class Time with _$Time {
 @freezed
 class IAQI with _$IAQI {
   const factory IAQI({
-    required IAQIValue dew,
-    required IAQIValue h,
-    required IAQIValue p,
-    required IAQIValue pm25,
-    required IAQIValue t,
-    required IAQIValue w,
+    IAQIValue? dew,
+    IAQIValue? h,
+    IAQIValue? p,
+    IAQIValue? pm25,
+    IAQIValue? t,
+    IAQIValue? w,
   }) = _IAQI;
 
   factory IAQI.fromJson(Map<String, dynamic> json) => _$IAQIFromJson(json);
@@ -141,7 +141,7 @@ class IAQI with _$IAQI {
 @freezed
 class IAQIValue with _$IAQIValue {
   const factory IAQIValue({
-    required double v,
+    double? v,
   }) = _IAQIValue;
 
   factory IAQIValue.fromJson(Map<String, dynamic> json) =>

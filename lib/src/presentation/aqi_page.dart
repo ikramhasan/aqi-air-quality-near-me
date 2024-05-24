@@ -78,8 +78,10 @@ class AQIPage extends StatelessWidget {
                     PollutantInfoBox(
                       width: 60,
                       color: sanitizedData.color,
-                      value: aqi.data.iaqi.pm25.v.toString(),
-                      label: aqi.data.dominantPollutant,
+                      value: aqi.data.iaqi.pm25 == null
+                          ? "N/A"
+                          : aqi.data.iaqi.pm25!.v.toString(),
+                      label: aqi.data.dominantPollutant ?? "N/A",
                     ),
                   ],
                 ),
@@ -126,13 +128,17 @@ class AQIPage extends StatelessWidget {
                     children: [
                       PollutantAmountBox(
                         label: 'PM25',
-                        value: aqi.data.iaqi.pm25.v.toString(),
+                        value: aqi.data.iaqi.pm25 == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.pm25!.v.toString(),
                         unit: 'µg/m³',
                       ),
                       const SizedBox(width: 8),
                       PollutantAmountBox(
                         label: 'Pressure',
-                        value: aqi.data.iaqi.p.v.toString(),
+                        value: aqi.data.iaqi.p == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.p!.v.toString(),
                         unit: 'hPa',
                       ),
                     ],
@@ -143,13 +149,17 @@ class AQIPage extends StatelessWidget {
                     children: [
                       PollutantAmountBox(
                         label: 'Temperature',
-                        value: aqi.data.iaqi.t.v.toString(),
+                        value: aqi.data.iaqi.t == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.t!.v.toString(),
                         unit: '°C',
                       ),
                       const SizedBox(width: 8),
                       PollutantAmountBox(
                         label: 'Humidity',
-                        value: aqi.data.iaqi.h.v.toString(),
+                        value: aqi.data.iaqi.h == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.h!.v.toString(),
                         unit: '%',
                       ),
                     ],
@@ -160,13 +170,17 @@ class AQIPage extends StatelessWidget {
                     children: [
                       PollutantAmountBox(
                         label: 'Dew Point',
-                        value: aqi.data.iaqi.dew.v.toString(),
+                        value: aqi.data.iaqi.dew == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.dew!.v.toString(),
                         unit: '°C',
                       ),
                       const SizedBox(width: 8),
                       PollutantAmountBox(
                         label: 'Wind Speed',
-                        value: aqi.data.iaqi.h.v.toString(),
+                        value: aqi.data.iaqi.h == null
+                            ? 'N/A'
+                            : aqi.data.iaqi.h!.v.toString(),
                         unit: 'm/s',
                       ),
                     ],

@@ -70,9 +70,12 @@ class SearchPage extends StatelessWidget {
                         ),
                       );
                     } else if (state.failure != Failure.empty()) {
-                      return Expanded(
+                      return const Expanded(
                         child: Center(
-                          child: Text(state.failure.message),
+                          child: Text(
+                            'We do not have any data for that location, check your spelling or try another place.',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       );
                     } else if (state.aqi != AQIResponse.empty()) {

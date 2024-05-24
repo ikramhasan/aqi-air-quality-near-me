@@ -25,7 +25,7 @@ _$DataImpl _$$DataImplFromJson(Map<String, dynamic> json) => _$DataImpl(
           .map((e) => Attribution.fromJson(e as Map<String, dynamic>))
           .toList(),
       city: City.fromJson(json['city'] as Map<String, dynamic>),
-      dominantPollutant: json['dominentpol'] as String,
+      dominantPollutant: json['dominentpol'] as String?,
       debug: Debug.fromJson(json['debug'] as Map<String, dynamic>),
       time: Time.fromJson(json['time'] as Map<String, dynamic>),
       iaqi: IAQI.fromJson(json['iaqi'] as Map<String, dynamic>),
@@ -99,12 +99,24 @@ Map<String, dynamic> _$$TimeImplToJson(_$TimeImpl instance) =>
     };
 
 _$IAQIImpl _$$IAQIImplFromJson(Map<String, dynamic> json) => _$IAQIImpl(
-      dew: IAQIValue.fromJson(json['dew'] as Map<String, dynamic>),
-      h: IAQIValue.fromJson(json['h'] as Map<String, dynamic>),
-      p: IAQIValue.fromJson(json['p'] as Map<String, dynamic>),
-      pm25: IAQIValue.fromJson(json['pm25'] as Map<String, dynamic>),
-      t: IAQIValue.fromJson(json['t'] as Map<String, dynamic>),
-      w: IAQIValue.fromJson(json['w'] as Map<String, dynamic>),
+      dew: json['dew'] == null
+          ? null
+          : IAQIValue.fromJson(json['dew'] as Map<String, dynamic>),
+      h: json['h'] == null
+          ? null
+          : IAQIValue.fromJson(json['h'] as Map<String, dynamic>),
+      p: json['p'] == null
+          ? null
+          : IAQIValue.fromJson(json['p'] as Map<String, dynamic>),
+      pm25: json['pm25'] == null
+          ? null
+          : IAQIValue.fromJson(json['pm25'] as Map<String, dynamic>),
+      t: json['t'] == null
+          ? null
+          : IAQIValue.fromJson(json['t'] as Map<String, dynamic>),
+      w: json['w'] == null
+          ? null
+          : IAQIValue.fromJson(json['w'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$IAQIImplToJson(_$IAQIImpl instance) =>
@@ -119,7 +131,7 @@ Map<String, dynamic> _$$IAQIImplToJson(_$IAQIImpl instance) =>
 
 _$IAQIValueImpl _$$IAQIValueImplFromJson(Map<String, dynamic> json) =>
     _$IAQIValueImpl(
-      v: (json['v'] as num).toDouble(),
+      v: (json['v'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$IAQIValueImplToJson(_$IAQIValueImpl instance) =>
