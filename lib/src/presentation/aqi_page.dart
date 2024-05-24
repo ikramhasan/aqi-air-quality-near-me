@@ -190,6 +190,32 @@ class AQIPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
+          
+          const Center(
+            child: Text(
+              'Recommendations',
+            ),
+          ),
+          const SizedBox(height: 8),
+          ListView.builder(
+            itemCount: sanitizedData.recommendations.length,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return Card(
+                color: Colors.white,
+                elevation: 0,
+                child: ListTile(
+                  leading: SvgPicture.asset(
+                    sanitizedData.recommendations[index].icon,
+                    color: sanitizedData.color,
+                  ),
+                  title: Text(sanitizedData.recommendations[index].text),
+                ),
+              );
+            },
+          ),
+          const SizedBox(height: 16),
           Card(
             color: Colors.white,
             elevation: 0,
